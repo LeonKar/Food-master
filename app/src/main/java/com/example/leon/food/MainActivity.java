@@ -9,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
+import com.example.leon.food.fragments.AnadirPlatoActivity;
 import com.example.leon.food.fragments.BusquedaActivity;
 import com.example.leon.food.fragments.PerfilActivity;
 import com.example.leon.food.fragments.PlatosActivity;
@@ -41,8 +42,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new PlatosActivity(), "Platos");
+        adapter.addFragment(new PlatosActivity(), "Platos buenos");
         adapter.addFragment(new BusquedaActivity(), "Busqueda");
+        adapter.addFragment(new AnadirPlatoActivity(), "Añadir plato");
         adapter.addFragment(new PerfilActivity(), "Perfil");
         viewPager.setAdapter(adapter);
     }
